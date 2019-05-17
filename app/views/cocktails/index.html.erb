@@ -1,16 +1,21 @@
-<div class="container text-align-center">
- <div class="row">
-   <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-     <h1>All Cocktails</h1>
-     <ul class="list-group">
-       <% @cocktails.each do |cocktail| %>
-         <li class="list-group-item">
-           <%= link_to cocktail.name, cocktail_path(cocktail) %>
-         </li>
-       <% end %>
-       <br>
-     </ul>
-     <%= link_to "Add a new cocktail", new_cocktail_path, class: 'btn btn-danger' %>
-   </div>
- </div>
-</div>
+       <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1481391564276-da6fcacaee31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2500&q=80);">
+         <div class="header">
+            <span id="banner-typed-text" class="moving-title"></span>
+         </div>
+           <p>Discover the most disgusting cocktails ideas on the planet</p>
+         <div class="container">
+           <div class="container2">
+             <ul class="card-category">
+               <% @cocktails.each do |cocktail| %>
+               <li class="card-category-item" style="background-image: url(https://images.unsplash.com/photo-1453825012366-3738046cb6c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80)"">
+               <%= link_to cocktail.name, cocktail_path(cocktail) %>
+               </li>
+               <% end %>
+               </ul>
+               <div class="button-alignment">
+               <%= link_to "Add an ugly cocktail now!", new_cocktail_path, class: 'btn btn-danger'%>
+               </div>
+          </div>
+        </div>
+        </div>
+
